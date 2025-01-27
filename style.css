@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.gallery img {
+    width: 100vw; /* Pełna szerokość ekranu */
+    height: 100vh; /* Pełna wysokość ekranu */
+    object-fit: cover; /* Dopasowanie obrazu bez zniekształceń */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Powiększenie obrazu po najechaniu myszką */
+}
