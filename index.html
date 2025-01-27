@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            window.scrollTo(0, 0);
+        });
+    </script>
 </head>
 <body>
-    <section class="slide" style="background-image: url('grafika1.png');"></section>
-    <section class="slide" style="background-image: url('grafika2.png');"></section>
-    <section class="slide" style="background-image: url('grafika3.png');"></section>
-    <section class="slide" style="background-image: url('grafika4.png');"></section>
-    <section class="slide" style="background-image: url('grafika5.png');"></section>
+    <div class="container">
+        <iframe src="grafika1.html" class="full-screen"></iframe>
+        <iframe src="grafika2.html" class="full-screen"></iframe>
+        <iframe src="grafika3.html" class="full-screen"></iframe>
+        <iframe src="grafika4.html" class="full-screen"></iframe>
+        <iframe src="grafika5.html" class="full-screen"></iframe>
+    </div>
 </body>
 </html>

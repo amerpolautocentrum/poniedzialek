@@ -8,22 +8,32 @@ html, body {
     height: 100%;
     width: 100%;
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow: hidden;
     font-family: Arial, sans-serif;
 }
 
-/* Pełnoekranowe sekcje */
-.slide {
-    height: 100vh;  /* 100% wysokości ekranu */
-    width: 100vw;   /* 100% szerokości ekranu */
-    background-size: cover; /* Pełne pokrycie ekranu grafiką */
-    background-position: center; /* Centrowanie obrazu */
-    background-repeat: no-repeat; /* Zapobieganie powtarzaniu */
-    scroll-snap-align: start;
+/* Kontener dla ramek */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 500vh; /* 5 stron pełnej wysokości */
 }
 
-/* Przewijanie sekcjami */
+/* Pełnoekranowe sekcje */
+.full-screen {
+    width: 100vw;
+    height: 100vh;
+    border: none;
+}
+
+/* Płynne przewijanie stron */
 body {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+}
+
+/* Zatrzymywanie przewijania na pełnym ekranie */
+.full-screen {
+    scroll-snap-align: start;
 }
