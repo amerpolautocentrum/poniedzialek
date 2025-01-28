@@ -13,14 +13,20 @@ html, body {
     background-color: #000;
 }
 
-/* Pełnoekranowe sekcje */
-.slide {
-    height: 100vh;  /* Pełna wysokość przeglądarki */
-    width: 100vw;   /* Pełna szerokość przeglądarki */
-    background-size: contain; /* Dopasowanie obrazu do ekranu bez przycięcia */
-    background-position: center; /* Wyśrodkowanie obrazu */
-    background-repeat: no-repeat; /* Brak powtarzania obrazu */
-    scroll-snap-align: start; /* Zatrzymywanie przewijania na każdej sekcji */
+/* Kontener ramek */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 500vh; /* 5 sekcji pełnoekranowych */
+}
+
+/* Dopasowanie ramek iframe */
+.full-screen {
+    width: 100vw;  /* Szerokość ekranu */
+    height: 100vh; /* Wysokość ekranu */
+    border: none;  /* Usunięcie obramowania */
+    scroll-snap-align: start; /* Zatrzymanie przewijania na każdej sekcji */
 }
 
 /* Przewijanie sekcjami */
