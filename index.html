@@ -7,26 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="gallery">
-        <iframe src="grafika1.html" class="full-screen"></iframe>
-        <iframe src="grafika2.html" class="full-screen"></iframe>
-        <iframe src="grafika3.html" class="full-screen"></iframe>
-        <iframe src="grafika4.html" class="full-screen"></iframe>
-        <iframe src="grafika5.html" class="full-screen"></iframe>
-    </div>
-    <script>
-        // Funkcja do dopasowania iframe do ekranu
-        function resizeFrames() {
-            const frames = document.querySelectorAll('.full-screen');
-            frames.forEach(frame => {
-                frame.style.width = `${window.innerWidth}px`;
-                frame.style.height = `${window.innerHeight}px`;
-            });
-        }
-
-        // Dopasowanie na starcie i przy zmianie rozmiaru okna
-        window.addEventListener('load', resizeFrames);
-        window.addEventListener('resize', resizeFrames);
-    </script>
+    <section class="slide" style="background-image: url('grafika1.png');"></section>
+    <section class="slide" style="background-image: url('grafika2.png');"></section>
+    <section class="slide" style="background-image: url('grafika3.png');"></section>
+    <section class="slide" style="background-image: url('grafika4.png');"></section>
+    <section class="slide" style="background-image: url('grafika5.png');"></section>
 </body>
 </html>
