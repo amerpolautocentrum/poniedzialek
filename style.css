@@ -13,22 +13,26 @@ html, body {
     background-color: #000;
 }
 
-/* Kontener ramek */
-.gallery {
-    display: flex;
-    flex-direction: column;
+/* Sekcje z grafikami */
+.slide {
     width: 100vw;
-    height: 500vh; /* 5 sekcji pełnoekranowych */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    scroll-snap-align: start;
 }
 
-/* Dopasowanie ramek iframe */
-.full-screen {
-    width: 100vw;  /* Szerokość ekranu */
-    height: 100vh; /* Wysokość ekranu */
-    border: none;  /* Usunięcie obramowania */
-    scroll-snap-align: start; /* Zatrzymanie przewijania na każdej sekcji */
+/* Dynamiczne dopasowanie ramki iframe */
+.responsive-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    object-fit: contain; /* Zapewnia skalowanie grafiki do przeglądarki */
 }
-
+    
 /* Przewijanie sekcjami */
 body {
     overflow-y: scroll;
